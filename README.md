@@ -60,7 +60,7 @@ Steps :
         }
    ```     
         
-![alt text](https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-011711_AudioPlayer.jpg)
+<img src="https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-011711_AudioPlayer.jpg" data-canonical-src="https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-011711_AudioPlayer.jpg" width="200" height="400" />
 
 
-![alt text](https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-012819_AudioPlayer.jpg)
+![alt text](https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-012819_AudioPlayer.jpg | width=100){:height="24px" width="48px"}
