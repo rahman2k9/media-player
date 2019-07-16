@@ -1,5 +1,13 @@
 RecyclerView based Media Player (resolved multiple bar proccessing like other media palyers inside whatsapp, facebook etc ).
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-011711_AudioPlayer.jpg" data-canonical-src="https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-011711_AudioPlayer.jpg" width="200" height="300" />
+
+
+
+<img src="https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-012819_AudioPlayer.jpg" data-canonical-src="https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-012819_AudioPlayer.jpg" width="200" height="300" />
+</p>
+
 Steps : 
 
 1 >  Create a Listener 
@@ -60,10 +68,4 @@ Steps :
         }
    ```     
         
- <p align="center">
-<img align="left"  src="https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-011711_AudioPlayer.jpg" data-canonical-src="https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-011711_AudioPlayer.jpg" width="200" height="300" />
-
-
-
-<img  align="left" src="https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-012819_AudioPlayer.jpg" data-canonical-src="https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-012819_AudioPlayer.jpg" width="200" height="300" />
-</p>
+ 
