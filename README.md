@@ -3,13 +3,15 @@ RecyclerView based Media Player (resolved multiple bar proccessing like other me
 Steps : 
 
 1 >  Create a Listener 
+```
   interface RecyclerViewListener {
     fun onViewAttached(holder: ViewHolder?)
     fun onViewRecycled(holder: ViewHolder)
   }
+  ```
   
 2 >  Call both of these in RecyclerView / Groupie Adapter (To handle recycling)
-
+```
   companion object {
         var currentPosition: Int = -1
         private var recyclerViewListener: RecyclerViewListener? = null
@@ -30,9 +32,9 @@ Steps :
         }
         super.onViewRecycled(holder)
   }
-
+```
 3 > Create a Runnable to update progress bar and Time
-
+```
    MyMediaPlayer.task = object : Runnable {
             override fun run() {
                 if (myMediaPlayer.isPlaying(position)) {
@@ -56,7 +58,7 @@ Steps :
                 }
             }
         }
-        
+   ```     
         
 ![alt text](https://raw.githubusercontent.com/rahman2k9/media-player/master/app/src/main/res/drawable/Screenshot_20190717-011711_AudioPlayer.jpg)
 
