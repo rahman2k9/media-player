@@ -12,6 +12,8 @@ import android.widget.TextView
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.audio_item.view.*
+import java.util.concurrent.TimeUnit
+import javax.xml.datatype.DatatypeConstants.MINUTES
 
 
 class AudioItem2(private val audioRes: Int) : Item<ViewHolder>() {
@@ -64,6 +66,16 @@ class AudioItem2(private val audioRes: Int) : Item<ViewHolder>() {
             myMediaPlayer.setMediaPlayerPrepared(object : MediaPlayerPreparedListener {
                 override fun onPrepared(mp: MediaPlayer) {
                     startUpdater(position)
+                    val finalTime = mp.duration
+                    duration.text = String.format(
+                        "%d min, %d sec",
+                        TimeUnit.MILLISECONDS.toMinutes(finalTime.toLong()),
+                        TimeUnit.MILLISECONDS.toSeconds(finalTime.toLong()) - TimeUnit.MINUTES.toSeconds(
+                            TimeUnit.MILLISECONDS.toMinutes(
+                                finalTime.toLong()
+                            )
+                        )
+                    )
                 }
 
             })
@@ -125,7 +137,18 @@ class AudioItem2(private val audioRes: Int) : Item<ViewHolder>() {
             override fun run() {
                 if (myMediaPlayer.isPlaying(position)) {
                     seekBar.max = myMediaPlayer.player!!.duration
-                    seekBar.progress = myMediaPlayer.player!!.currentPosition
+
+                    val startTime = myMediaPlayer.player!!.currentPosition
+                    currentTime.text = String.format(
+                        "%d min, %d sec",
+                        TimeUnit.MILLISECONDS.toMinutes(startTime.toLong()),
+                        TimeUnit.MILLISECONDS.toSeconds(startTime.toLong()) - TimeUnit.MINUTES.toSeconds(
+                            TimeUnit.MILLISECONDS.toMinutes(
+                                startTime.toLong()
+                            )
+                        )
+                    )
+                    seekBar.progress = startTime
                     MyMediaPlayer.handler?.postDelayed(this, 50)
                 } else {
                     seekBar.max = myMediaPlayer.player!!.duration

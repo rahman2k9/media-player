@@ -14,7 +14,7 @@
             android:gravity="center"
             android:textStyle="bold|italic"
             android:layout_height="wrap_content"
-            android:text="Audio Exoplayer Player  (2.9.6)"/>
+            android:text="RecyclerView MediaPlayer "/>
 
     <android.support.v7.widget.RecyclerView
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"
