@@ -3,6 +3,7 @@ package raman.audio.player
 import android.media.MediaPlayer
 import android.os.Handler
 import android.util.Log
+import android.view.View
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.widget.ImageButton
@@ -11,7 +12,7 @@ import android.widget.SeekBar
 import android.widget.TextView
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.main.audio_item.view.*
+import raman.audio.player.databinding.AudioItemBinding
 import java.util.concurrent.TimeUnit
 import javax.xml.datatype.DatatypeConstants.MINUTES
 
@@ -25,16 +26,15 @@ class AudioItem2(private val audioRes: Int) : Item<ViewHolder>() {
     lateinit var currentTime: TextView
     lateinit var duration: TextView
 
-
     override fun getLayout(): Int = R.layout.audio_item
 
     override fun bind(viewHolder: ViewHolder, position: Int) {
 
-        btnPlay = viewHolder.itemView.btnPlay
-        btnPause = viewHolder.itemView.btnPause
-        seekBar = viewHolder.itemView.seekBar
-        currentTime = viewHolder.itemView.txtStartTime
-        duration = viewHolder.itemView.txtSongTime
+        btnPlay = viewHolder.itemView.findViewById(R.id.btnPlay)
+        btnPause = viewHolder.itemView.findViewById(R.id.btnPause)
+        seekBar = viewHolder.itemView.findViewById(R.id.seekBar)
+        currentTime = viewHolder.itemView.findViewById(R.id.txtStartTime)
+        duration = viewHolder.itemView.findViewById(R.id.txtSongTime)
 
         myMediaPlayer = MyMediaPlayer.getInstance(viewHolder.itemView.context)
 
@@ -56,6 +56,7 @@ class AudioItem2(private val audioRes: Int) : Item<ViewHolder>() {
             MyGroupAdapter.currentPosition = position
             myMediaPlayer.playResource(position, audioRes, seekBar.progress)
             myMediaPlayer.setViews(
+
                 btnPlay = btnPlay,
                 btnPause = btnPause,
                 seekBar = seekBar,
@@ -158,12 +159,12 @@ class AudioItem2(private val audioRes: Int) : Item<ViewHolder>() {
 
             }
         }
+        MyMediaPlayer.task?.let { MyMediaPlayer.handler?.postDelayed(it,50) }
 
-        MyMediaPlayer.handler?.postDelayed(MyMediaPlayer.task, 50)
     }
 
     private fun stopUpdater() {
-        MyMediaPlayer.handler?.removeCallbacks(MyMediaPlayer.task, null)
+        MyMediaPlayer.task?.let { MyMediaPlayer.handler?.removeCallbacks(it, null) }
         MyMediaPlayer.handler = null
         MyMediaPlayer.task = null
     }
