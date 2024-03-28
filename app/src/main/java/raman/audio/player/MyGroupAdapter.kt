@@ -13,7 +13,7 @@ class MyGroupAdapter : GroupAdapter<ViewHolder>() {
         }
     }
 
-    override fun onViewAttachedToWindow(holder: ViewHolder?) {
+    override fun onViewAttachedToWindow(holder: ViewHolder) {
         if (holder != null && currentPosition == getAdapterPosition(holder.item)) {
             recyclerViewListener?.onViewAttached(holder)
         }

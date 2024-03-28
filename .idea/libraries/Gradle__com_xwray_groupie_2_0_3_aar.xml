@@ -1,10 +1,12 @@
 <component name="libraryTable">
-  <library name="Gradle: com.xwray:groupie:2.0.3@aar">
+  <library name="Gradle: com.xwray:groupie:2.0.3@aar" external-system-id="GRADLE">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e92ea93315ad52338bc53b5d64c4968c/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e92ea93315ad52338bc53b5d64c4968c/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f942fa3759c89f98a1240df0a6707c0e/transformed/jetified-groupie-2.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f942fa3759c89f98a1240df0a6707c0e/transformed/jetified-groupie-2.0.3/AndroidManifest.xml" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.xwray/groupie/2.0.3/105cebd2d068226a78b710260ffcc5419384d80/groupie-2.0.3-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.xwray/groupie/2.0.3/6e399c38851056a9330c03394c34103b841acbfa/groupie-2.0.3-sources.jar!/" />
     </SOURCES>

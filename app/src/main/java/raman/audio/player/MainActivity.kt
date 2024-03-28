@@ -1,15 +1,18 @@
 package raman.audio.player
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import com.xwray.groupie.Section
-import kotlinx.android.synthetic.main.activity_main.*
+import raman.audio.player.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         setupRecyclerView()
     }
 
@@ -36,6 +39,6 @@ class MainActivity : AppCompatActivity() {
         section.add(AudioItem2(R.raw.abc_17))
         section.add(AudioItem2(R.raw.abc_18))
         adapter.add(section)
-        audioRecyclerView.adapter = adapter
+        binding.audioRecyclerView.adapter = adapter
     }
 }

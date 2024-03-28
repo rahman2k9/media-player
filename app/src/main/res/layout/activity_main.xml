@@ -16,8 +16,8 @@
             android:layout_height="wrap_content"
             android:text="RecyclerView MediaPlayer "/>
 
-    <android.support.v7.widget.RecyclerView
-            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+    <androidx.recyclerview.widget.RecyclerView
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/audio_item"
             android:id="@+id/audioRecyclerView"
             android:layout_width="match_parent"
